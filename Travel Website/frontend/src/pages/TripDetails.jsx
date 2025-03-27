@@ -21,7 +21,7 @@ const TripDetails = () => {
 
   const fetchTripDetails = async () => {
     try {
-      const response = await axios.get(`http://localhost:5000/api/trips/${id}`);
+      const response = await axios.get(`https://college-wanderers.onrender.com/api/trips/${id}`);
       setTrip(response.data);
     } catch (error) {
       toast.error('Error fetching trip details');
@@ -41,7 +41,7 @@ const TripDetails = () => {
     try {
       const token = localStorage.getItem('token');
       const response = await axios.post(
-        `http://localhost:5000/api/trips/${id}/book`,
+        `https://college-wanderers.onrender.com/api/trips/${id}/book`,
         {},
         {
           headers: {
@@ -65,7 +65,7 @@ const TripDetails = () => {
     try {
       const token = localStorage.getItem('token');
       const response = await axios.post(
-        `http://localhost:5000/api/trips/${id}/cancel`,
+        `https://college-wanderers.onrender.com/api/trips/${id}/cancel`,
         {},
         {
           headers: {

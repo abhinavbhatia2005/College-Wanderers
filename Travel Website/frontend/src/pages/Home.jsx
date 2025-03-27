@@ -21,7 +21,7 @@ const Home = () => {
 
   const fetchTrips = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/trips');
+      const response = await axios.get('https://college-wanderers.onrender.com/api/trips');
       setTrips(response.data);
     } catch (error) {
       toast.error('Error fetching trips');
@@ -40,7 +40,7 @@ const Home = () => {
       if (destination) params.destination = destination;
       if (startDate) params.startDate = startDate.toISOString();
 
-      const response = await axios.get('http://localhost:5000/api/trips', { params });
+      const response = await axios.get('https://college-wanderers.onrender.com/api/trips', { params });
       setTrips(response.data);
     } catch (error) {
       toast.error('Error searching trips');

@@ -36,7 +36,7 @@ const CreateTrip = () => {
     setLoading(true);
 
     try {
-      await axios.post('http://localhost:5000/api/trips', formData);
+      await axios.post('https://college-wanderers.onrender.com/api/trips', formData);
       toast.success('Trip created successfully!');
       navigate('/');
     } catch (error) {

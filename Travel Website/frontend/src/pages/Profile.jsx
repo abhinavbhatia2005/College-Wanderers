@@ -19,10 +19,10 @@ const Profile = () => {
   const fetchUserTrips = async () => {
     try {
       const [createdTrips, bookedTrips] = await Promise.all([
-        axios.get('http://localhost:5000/api/trips', {
+        axios.get('https://college-wanderers.onrender.com/api/trips', {
           params: { creator: user._id }
         }),
-        axios.get('http://localhost:5000/api/trips', {
+        axios.get('https://college-wanderers.onrender.com/api/trips', {
           params: { bookedBy: user._id }
         })
       ]);
