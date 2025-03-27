@@ -20,7 +20,7 @@ export const AuthProvider = ({ children }) => {
 
   const checkAuth = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/auth/profile');
+      const response = await axios.get('https://college-wanderers.onrender.com/api/auth/profile');
       setUser(response.data);
       setIsAuthenticated(true);
     } catch (error) {
@@ -37,7 +37,7 @@ export const AuthProvider = ({ children }) => {
     try {
       console.log('Login attempt with:', { email, password: '***' });
       
-      const response = await axios.post('http://localhost:5000/api/auth/login', {
+      const response = await axios.post('https://college-wanderers.onrender.com/api/auth/login', {
         email,
         password,
       });
@@ -74,7 +74,7 @@ export const AuthProvider = ({ children }) => {
 
   const register = async (userData) => {
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/register', userData);
+      const response = await axios.post('https://college-wanderers.onrender.com/api/auth/register', userData);
       const { token, user } = response.data;
       localStorage.setItem('token', token);
       axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
