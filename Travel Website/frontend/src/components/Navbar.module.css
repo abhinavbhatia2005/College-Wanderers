@@ -1,0 +1,67 @@
+.navbar {
+  @apply bg-white shadow-md;
+}
+
+.container {
+  @apply container mx-auto px-4;
+}
+
+.navContent {
+  @apply flex items-center justify-between h-16;
+}
+
+.logo {
+  @apply text-2xl font-bold text-primary-600;
+}
+
+.navLinks {
+  @apply hidden md:flex items-center space-x-8;
+}
+
+.navLink {
+  @apply text-gray-600 hover:text-primary-600 transition-colors;
+}
+
+.navLinkActive {
+  @apply text-primary-600 font-medium;
+}
+
+.authButtons {
+  @apply flex items-center space-x-4;
+}
+
+.button {
+  @apply px-4 py-2 rounded-md font-medium transition-colors;
+}
+
+.loginButton {
+  @apply text-primary-600 hover:text-primary-700;
+}
+
+.registerButton {
+  @apply bg-primary-600 text-white hover:bg-primary-700;
+}
+
+.mobileMenuButton {
+  @apply md:hidden p-2 rounded-md text-gray-600 hover:text-primary-600 hover:bg-gray-100;
+}
+
+.mobileMenu {
+  @apply md:hidden;
+}
+
+.mobileMenuOpen {
+  @apply block absolute top-16 left-0 right-0 bg-white shadow-md;
+}
+
+.mobileNavLinks {
+  @apply px-4 py-2 space-y-2;
+}
+
+.mobileNavLink {
+  @apply block px-4 py-2 text-gray-600 hover:text-primary-600 hover:bg-gray-100 rounded-md;
+}
+
+.mobileNavLinkActive {
+  @apply text-primary-600 font-medium bg-gray-50;
+} 
